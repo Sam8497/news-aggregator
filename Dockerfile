@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 # Step 5: Build the Vite app
-RUN npx vite build
+RUN npm run build
 
 # Step 6: Use NGINX to serve the built files
 FROM nginx:stable-alpine

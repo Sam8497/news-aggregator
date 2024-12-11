@@ -49,8 +49,8 @@ news-aggregator/
 │   │   │   ├── News.jsx
 │   │   ├── NewsCard
 │   │   │   ├── Details
-│   │   │		│   ├── Details.css
-│   │   │		│   ├── Details.jsx
+│   │   │       │   ├── Details.css
+│   │   │       │   ├── Details.jsx
 │   │   │   ├── NewsCard.css
 │   │   │   ├── NewsCard.jsx
 │   │   ├── NoDataFound
@@ -114,3 +114,101 @@ news-aggregator/
 
 5. State Management
 - Redux Toolkit: Used to manage the state of the application, including articles fetched, user preferences, and filter criteria. Redux slices (articlesSlice.js) are created to handle specific aspects of the state.
+
+## Dockerization
+### Dockerfile
+
+The Dockerfile defines the steps to build the Docker image for the application.
+
+# Step 1: Use Node.js for building the app
+FROM node:18-alpine as builder
+
+# Step 2: Set the working directory
+WORKDIR /app
+
+# Step 3: Copy package.json and install dependencies
+COPY package*.json ./
+RUN npm install
+
+# Step 4: Copy the application source code
+COPY . .
+
+# Step 5: Build the Vite app
+RUN npm run build
+
+# Step 6: Use NGINX to serve the built files
+FROM nginx:stable-alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Step 7: Expose port 80 for HTTP traffic
+EXPOSE 80
+
+# Step 8: Start NGINX
+CMD ["nginx", "-g", "daemon off;"]
+
+## Docker Compose (Optional)
+If using Docker Compose, the docker-compose.yml file simplifies running the application.
+```
+version: '3.8'
+services:
+  vite-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    command: ["npm", "run", "dev", "--", "--host"]
+```
+## Build and Run the Docker Container
+1. Build the Docker Image: Open a terminal in the root directory of your project and run:
+
+    `docker build -t news-aggregator .`
+
+2. Run the Docker Container: To start a container from your image, run:
+    `docker run -p 80:80 news-aggregator`
+
+    If using Docker Compose, you can build and run the container with:
+    `docker-compose up --build`
+
+### Project Setup and Dockerization
+1. Clone the Repository:
+
+    git clone https://github.com/Sam8497/news-aggregator
+    cd news-aggregator
+
+2. Install Docker:
+
+    Ensure Docker is installed on your machine. You can download it from Docker's official website.
+
+3. Build the Docker Image:
+
+    `docker build -t news-aggregator .`
+
+4. Run the Docker Container:
+    
+    `docker run -p 80:80 news-aggregator`
+
+    Alternatively, if you are using Docker Compose, run:
+    
+    `docker-compose up --build`
+
+5. Access the Application:
+
+    Open your web browser and go to http://localhost to see the application running.
+
+6. Stopping the Container:
+
+    If you started the container with Docker Compose, stop it using:
+    
+    `docker-compose down`
+
+    If you started the container directly, find the container ID with:
+    
+    `docker ps`
+
+    Then stop it with:
+
+    `docker stop <container_id>`
