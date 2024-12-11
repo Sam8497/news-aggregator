@@ -2,19 +2,24 @@
 	display: flex;
     justify-content: center;
     height: calc(100vh - 500px);
-    border: 2px dotted;
-    margin: 100px;
+    border: 2px dotted #ccc;
+    margin: 40px;
+    padding: 20px;
     text-align: center;
 		cursor: pointer;
 }
 .noDataContainer span{
 	display: flex;
 	align-items: center;
+	font-size: 18px;
+	color: #666;
 }
 .noDataContainer .search-icon {
 	display: flex;
 	justify-content: center;
-	font-size: 42px;
+	font-size: 48px;
 	flex-wrap: wrap;
 	align-items: center;
+	color: #999;
+	margin-bottom: 10px;
 }
