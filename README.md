@@ -1,29 +1,41 @@
 ### Overview
 
-This project is a news aggregator website built with React.js. The application pulls articles from various sources and displays them in a clean, easy-to-read format. Users can search for articles by keyword, filter results by date, category, and source, and create a personalized news feed. The application is mobile-responsive and optimized for viewing on various devices.
+This project is a news aggregator website built with React.js. The application integrates multiple APIs to deliver articles from various sources, offering users a clean, intuitive, and mobile-responsive interface. Users can easily search for articles, filter results, and customize their news feed according to their preferences.
 
 ### Features
 
 1. Article Search and Filtering
-Users can search for articles by entering keywords.
-Filtering options are available by date, category, and source.
-2. Personalized News Feed
-Users can customize their news feed by selecting preferred sources, categories, and authors.
-3. Mobile-Responsive Design
-The website is optimized for both desktop and mobile devices.
-4. Data Sources
-The application uses the following data sources:
 
-- NewsAPI: Provides access to a wide range of news articles from various sources.
-- The Guardian API: Fetches articles from The Guardian.
-- New York Times API: Retrieves articles from The New York Times.
+  - Search articles by entering keywords.
+  - Filter results by:
+    - Date
+    - Category
+    - Source
+
+2. Personalized News Feed
+
+  - Customize your feed by selecting:
+    - Preferred sources
+    - Categories
+    - Authors
+
+3. Mobile-Responsive Design
+
+  - Fully optimized for both desktop and mobile devices to ensure a seamless user experience.
+
+4. Data Sources
+
+  - The application pulls articles from the following APIs:
+    - NewsAPI: Access articles from a broad range of global sources.
+    - The Guardian API: Fetch news from The Guardian.
+    - New York Times API: Retrieve articles from The New York Times.
 
 ### Technologies Used
-- React.js: A JavaScript library for building user interfaces.
-- Redux Toolkit: For state management.
-- Axios: For making HTTP requests to fetch data from APIs.
-- React Bootstrap: For UI components and styling.
-- Docker: For containerizing the application.
+- React.js: For building the user interface.
+- Redux Toolkit: To manage and simplify the application's state.
+- Axios: For making HTTP requests and interacting with external APIs.
+- React Bootstrap: To enhance the styling and UI components.
+- Docker: For containerizing the application, ensuring easy deployment and scalability.
 
 ### Project Structure
 ```
