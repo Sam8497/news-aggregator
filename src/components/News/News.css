@@ -1,0 +1,42 @@
+.personalized h1{
+	margin-top: 0;
+}
+.notify-container {
+    display: flex;
+    justify-content: center;
+    min-height: 300px;
+    height: calc(100vh - 500px);
+    border: 2px dotted #666;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.notify-container span {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .notify-container {
+        margin: 10px;
+        min-height: 200px;
+        height: calc(100vh - 400px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .notify-container {
+        margin: 5px;
+        padding: 15px;
+        min-height: 150px;
+        height: calc(100vh - 300px);
+    }
+}

@@ -1,0 +1,62 @@
+.card {
+    border-radius: 20px !important;
+    background: linear-gradient(135deg, #29303b, #1a1f24) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    color: #fff !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+.card-img {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 230px !important;
+    filter: brightness(0.95) !important;
+    transition: filter 0.3s ease !important;
+}
+
+.card:hover .card-img {
+    filter: brightness(1.05) !important;
+}
+
+.card-description {
+    color: rgba(255, 255, 255, 0.7) !important;
+    line-height: 1.6 !important;
+}
+
+.card-btn {
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(0, 90, 187, 0.3) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    background-color: #3b82f6 !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.card-btn:hover {
+    background-color: #2563eb !important;
+    box-shadow: 0 6px 20px rgba(0, 90, 187, 0.5) !important;
+}
+
+.arrow-icon {
+    fill: #fff !important;
+    width: 14px !important;
+    transition: transform 0.3s ease !important;
+    vertical-align: middle !important;
+    margin-left: 4px !important;
+}
+
+.card-btn:hover .arrow-icon {
+    transform: translateX(6px);
+}

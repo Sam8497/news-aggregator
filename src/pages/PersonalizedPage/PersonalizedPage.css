@@ -1,0 +1,97 @@
+.personalized-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e2a3a 0%, #0f172a 100%);
+  padding: 100px 2rem;
+}
+
+.filter-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.offcanvas {
+  background-color: #1e2a3a !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas-title h1 {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.offcanvas-header .btn-close{
+	background-color: #fff;
+} 
+
+.offcanvas-body h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-container {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 2rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.checkbox-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.checkbox-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.checkbox-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.form-check {
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.form-check:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-check-label {
+  color: #fff;
+}
+
+.form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.offcanvas-footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.offcanvas-footer button {
+  min-width: 120px;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+}
